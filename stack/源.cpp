@@ -36,16 +36,15 @@ using namespace std;
 
 int main()
 {
-	/*stack<int> s(10);
-	queue<int> q;
-	Btree<int> t(0),t1(1),t2(2),t3(3),t4(4);
-	t.SetL(t1);
-	t.SetR(t2);
-	t2.SetL(t3);
-	t2.SetR(t4);
-	t.PreOrder();
-	t.InOrder();
-	t.PostOrder();*/
+	stack<int> s(10);
+	int a = 1;
+	int b = 2;
+	s.Push(a);
+	s.Push(b);
+	cout << s.Top();
+	s.Pop(a);
+	cout << s.Top();
+
 
 	/*int a = 1, b;
 	int a2[] = { 1, 2, 3, 4, 6, 4 };
@@ -59,14 +58,14 @@ int main()
 	{
 		q.Pop(b);
 	}*/
-	char inp[] = "abdecf", inp2[100] = "dbeacf";
+	/*char inp[] = "abdecf", inp2[100] = "dbeacf";
 	int a = strlen(inp);
 	Btree<char> pre[100], mid[100];
 	for (int i = 0; i < a; i++)
 	{
 		pre[i].SetI(inp[i]);
 		pre[i].SetI(inp2[i]);
-	}
+	}*/
 
 	getchar();
 	return 0;

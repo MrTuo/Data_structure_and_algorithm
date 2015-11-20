@@ -9,8 +9,10 @@ public:
 	~stack();
 	bool Pop(T& data_iteam);
 	bool Push(T& data_iteam);
-	inline int number_stacked();
-	inline int stack_size();
+	T Top();
+	bool IsEmpty();//判断栈内元素是否为空
+	inline int number_stacked();//返回当前站内元素个数
+	inline int stack_size();//返回栈大小
 private:
 	int max_size;
 	int top;
@@ -40,6 +42,12 @@ bool stack<T>::Pop(T& data_iteam)
 	else
 		return false;
 }
+template<class T>
+T stack<T>::Top()
+{
+	if (IsEmpty())
+		return data[top];
+}
 
 template <class T>
 bool stack<T>::Push(T& data_iteam)
@@ -62,4 +70,12 @@ template <class T>
 int stack<T>::stack_size()
 {
 	return max_size;
+}
+
+template <class T>
+bool stack<T>::IsEmpty()
+{
+	if (number_stacked())
+		return 0;
+	return 1;
 }
